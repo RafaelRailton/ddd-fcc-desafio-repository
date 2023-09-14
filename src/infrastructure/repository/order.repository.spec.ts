@@ -110,12 +110,13 @@ describe("Customer Repository unit tests", () => {
       product.id,
       2
     );
+    
     const order = new Order("1", customer.id, [orderItem]);
     const orderRepository = new OrderRepository();
     await orderRepository.create(order);
     
    
-    
+
     const orderItemUpdate = new OrderItem(
       "1", product.name,
       14,
